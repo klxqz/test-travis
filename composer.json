@@ -11,5 +11,8 @@
     "psr-4": {
       "Korobovn\\Tests\\": "tests/"
     }
+  },
+  "require": {
+    "ext-mbstring": "*"
   }
 }
