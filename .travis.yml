@@ -11,5 +11,6 @@ install:
 script:
   - php vendor/bin/phpunit --coverage-clover=coverage.xml --whitelist src tests
 
+
 after_success:
   - bash <(curl -s https://codecov.io/bash)
