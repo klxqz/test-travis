@@ -9,7 +9,7 @@ install:
   - composer install
 
 script:
-  - php vendor/bin/phpunit --coverage-clover=coverage.xml tests
+  - php vendor/bin/phpunit --coverage-clover=coverage.xml --whitelist src tests tests
   - vendor/bin/phpunit
 
 after_success:
