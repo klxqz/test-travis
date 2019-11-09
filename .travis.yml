@@ -2,7 +2,9 @@ language: php
 php:
   - 7.2
 
-install: composer install
+install:
+  - apt-get install php-mbstring
+  - composer install
 
 script:
   - php vendor/bin/phpunit tests

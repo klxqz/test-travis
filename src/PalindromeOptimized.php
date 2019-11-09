@@ -55,6 +55,8 @@ class PalindromeOptimized implements PalindromeInterface
      */
     protected function checkPalindrome(array $chars, int $center, bool $even)
     {
+        print_r($chars);
+
         $centerOffset = $even ? 1 : 0;
         $leftIndex = $center - $centerOffset;
         $rightIndex = $center + 1;
