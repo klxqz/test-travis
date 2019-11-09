@@ -33,7 +33,7 @@ class PalindromeOptimized implements PalindromeInterface
 
         $chars = preg_split('//u', $preparedString, NULL, PREG_SPLIT_NO_EMPTY);
 
-        for ($i = 0; $i < count($chars); $i++) {
+        for ($i = 1; $i < count($chars); $i++) {
             $this->checkPalindrome($chars, $i, false);
             $this->checkPalindrome($chars, $i, true);
         }
@@ -55,8 +55,6 @@ class PalindromeOptimized implements PalindromeInterface
      */
     protected function checkPalindrome(array $chars, int $center, bool $even)
     {
-        print_r($chars);
-
         $centerOffset = $even ? 1 : 0;
         $leftIndex = $center - $centerOffset;
         $rightIndex = $center + 1;
@@ -68,9 +66,9 @@ class PalindromeOptimized implements PalindromeInterface
         }
 
         while (
-            $chars[$leftIndex] == $chars[$rightIndex] &&
             $leftIndex >= 0 &&
-            $rightIndex < count($chars)
+            $rightIndex < count($chars) &&
+            $chars[$leftIndex] == $chars[$rightIndex]
         ) {
             if ($length > $this->maxLength) {
                 $this->maxLength = $length;
