@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/klxqz/test-travis.svg?branch=master)](https://travis-ci.org/klxqz/test-travis)
+[![codecov](https://codecov.io/gh/klxqz/test-travis/branch/master/graph/badge.svg)](https://codecov.io/gh/klxqz/test-travis)
 
 Palindrome
 ========
