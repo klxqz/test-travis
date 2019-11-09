@@ -2,8 +2,15 @@ language: php
 php:
   - 7.2
 
+env:
+  - CODECOV_TOKEN="6e76da77-d38b-43da-9ea3-ee367062f653"
+
 install:
   - composer install
 
 script:
-  - php vendor/bin/phpunit tests
+  - php vendor/bin/phpunit --coverage-clover=coverage.xml tests
+  - vendor/bin/phpunit
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

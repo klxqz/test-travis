@@ -8,3 +8,6 @@ RUN apt-get update && apt-get install -y \
         git \
 	&& docker-php-ext-configure zip --with-libzip \
 	&& docker-php-ext-install zip
+
+RUN pecl install xdebug-2.7.0 \
+    && docker-php-ext-enable xdebug
