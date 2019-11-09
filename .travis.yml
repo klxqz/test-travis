@@ -3,7 +3,7 @@ php:
   - 7.2
 
 install:
-  - apt-get install php-mbstring
+  - sudo apt-get install php-mbstring
   - composer install
 
 script:
